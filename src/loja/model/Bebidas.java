@@ -2,7 +2,7 @@ package loja.model;
 
 public abstract class Bebidas {
 
-	 private int id;
+	    private int id;
 	    private String nome;
 	    private int categoria;
 	    private float teorAlcoolico;
@@ -82,11 +82,11 @@ public abstract class Bebidas {
 		System.out.println("DADOS DA BEBIDA:                                                     ");
 		System.out.println("\n\n*****************************************************************");
 		System.out.println("ID: " + this.id                                                       );
-		System.out.println("Nome: " + this.nome                                                   );
+		System.out.println("Nome: " + nome                                                        );
 		System.out.println("Categoria: " + categoria                                              );
 		System.out.println("Teor Alcoólico: " + this.teorAlcoolico                                );
 		System.out.println("Quantidade: " + this.quantidade                                       );
-		System.out.println("*********************************************************************");
+
 	}
 
 }
