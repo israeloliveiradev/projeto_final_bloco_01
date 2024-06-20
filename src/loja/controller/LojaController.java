@@ -44,9 +44,9 @@ public class LojaController implements LojaRepository {
 
 		if (buscaBebidas != null) {
 			listaBebidas.set(listaBebidas.indexOf(buscaBebidas), bebidas);
-			System.out.println("\nO produto " + bebidas.getId() + " foi atualizado com sucesso!");
+			System.out.println("\nO produto " + bebidas.getNome() + " foi atualizado com sucesso!");
 		} else
-			System.out.println("\nO produto " + bebidas.getId() + "não foi encontrado! ");
+			System.out.println("\nO produto " + bebidas.getNome() + "não foi encontrado! ");
 
 	}
 
@@ -55,8 +55,7 @@ public class LojaController implements LojaRepository {
 		var bebidas = buscarNaCollection(id);
 
 		if (bebidas != null) {
-			if (listaBebidas.remove(bebidas) == true)
-				;
+			if (listaBebidas.remove(bebidas) == true);
 			System.out.println("\nO produto " + id + " foi excluido com sucesso!");
 
 		} else

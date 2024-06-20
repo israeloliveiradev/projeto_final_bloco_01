@@ -9,6 +9,7 @@ import loja.model.Cerveja;
 import loja.model.Vinho;
 import loja.model.Vodka;
 import loja.model.Whisky;
+import loja.model.*;
 
 public class Menu {
 
@@ -165,7 +166,7 @@ public class Menu {
 						input.skip("\\R?");
 						ibu = input.nextInt();
 						bebidas.atualizarProduto(
-								new Cerveja(bebidas.gerarId(), produto, categoria, teorAlcoolico, quantidade, ibu));
+								new Cerveja(id, produto, categoria, teorAlcoolico, quantidade, ibu));
 					}
 
 					case 2 -> {
@@ -173,7 +174,7 @@ public class Menu {
 						input.skip("\\R?");
 						tipoUva = input.nextLine();
 						bebidas.atualizarProduto(
-								new Vinho(bebidas.gerarId(), produto, categoria, teorAlcoolico, quantidade, tipoUva));
+								new Vinho(id, produto, categoria, teorAlcoolico, quantidade, tipoUva));
 
 					}
 
@@ -182,7 +183,7 @@ public class Menu {
 						input.skip("\\R?");
 						idade = input.nextInt();
 						bebidas.atualizarProduto(
-								new Whisky(bebidas.gerarId(), produto, categoria, teorAlcoolico, quantidade, idade));
+								new Whisky(id, produto, categoria, teorAlcoolico, quantidade, idade));
 
 					}
 
@@ -190,7 +191,7 @@ public class Menu {
 						System.out.println("Digite o Local de Fabricação da Vodka: ");
 						input.skip("\\R?");
 						localFabricacao = input.nextLine();
-						bebidas.atualizarProduto(new Vodka(bebidas.gerarId(), produto, categoria, teorAlcoolico,
+						bebidas.atualizarProduto(new Vodka(id, produto, categoria, teorAlcoolico,
 								quantidade, localFabricacao));
 					}
 
