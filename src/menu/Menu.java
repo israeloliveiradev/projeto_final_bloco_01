@@ -3,6 +3,7 @@ package menu;
 import java.util.Locale;
 import java.util.Scanner;
 
+
 public class Menu {
 
 	public static void main(String[] args) {
@@ -11,6 +12,7 @@ public class Menu {
 
 		String produto;
 		int opcao, id, categoria, quantidade;
+		float teorAlcoolico;
 
 		while (true) {
 			System.out.println("***************************************************************");
@@ -53,6 +55,9 @@ public class Menu {
 					categoria = input.nextInt();
 
 				} while (categoria < 1 || categoria > 4);
+
+				System.out.println("Digite o Teor Alcoólico da bebida: ");
+				teorAlcoolico = input.nextFloat();
 				System.out.println("Digite a Quantidade de Itens: ");
 				quantidade = input.nextInt();
 
@@ -60,10 +65,11 @@ public class Menu {
 
 			case 2:
 				System.out.println("Estoque Disponível:\n\n ");
+
 				break;
 
 			case 3:
-				System.out.println("Buscar Por Categoria:\n\n");
+				System.out.println("Buscar Por ID:\n\n");
 				break;
 
 			case 4:
@@ -71,7 +77,7 @@ public class Menu {
 				break;
 
 			case 5:
-				System.out.println("Deleter Produto:\n\n");
+				System.out.println("Deletar Produto:\n\n");
 				break;
 
 			default:
